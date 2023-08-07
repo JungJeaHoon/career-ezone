@@ -1,0 +1,1670 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap');
+
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+.content {
+  max-width: 1260px;
+  margin: auto;
+}
+button {
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #4876EF;
+  color: #fff;
+}
+
+
+.UpBtnWrap {
+  position: fixed;
+  right: 60px;
+  bottom: 78px;
+  z-index: 2;
+}
+.UpBtn {
+  font-size: 35px;
+  color: #4876EF;
+  cursor: pointer;
+}
+.UpBtn:hover {
+  color:#0437b9;
+  transition: 0.5s;
+}
+
+
+
+
+/* 800px 이후 gnb창 */
+
+.dark { 
+  position:fixed; 
+  background:rgba(0,0,0,0.8);  
+  z-index:100;
+  inset:0px; 
+  display: none;}
+
+.SideBtnWrap {
+  position: absolute;
+  top: 80px;
+  left: 19px;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4876EF;
+  display: none;
+}
+.SideBtn {
+  font-size: 25px;
+  color: #fff;
+}
+.SideBtnWrap:hover {
+  background: none;
+  border: 1px solid #bdbdbd;
+}
+.SideBtn:hover {
+  color:#000;
+}
+.gnb_open { 
+  position:fixed; 
+  top:0; left:0; 
+  bottom:0; 
+  width:304px; 
+  background:#fff;
+  z-index:101; 
+  overflow:hidden; 
+  transform: translateX(-100%);
+  transition: .3s ease-in;
+}
+
+.gnb_open .inner { height:100%; width:304px; overflow-y: scroll; padding-right:17px; box-sizing:content-box;}
+
+
+
+
+
+
+
+
+/* 기본상태,펼치기 전 */
+
+.user_image {
+  width: 100px;
+  height: 140px;
+  border: 0;
+}
+.content {
+  max-width: 1260px;
+}
+.resume {
+  margin: 0;
+  padding: 0;
+  max-width: 980px;
+  position: relative;
+  box-sizing: border-box;
+  border-collapse: separate;
+  font-size: 15px;
+  line-height: 1.231;
+}
+form {
+  padding: 70px 00px;  
+}
+.section1_title {
+  float: left;
+    color: #222;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    line-height: 34px;
+}
+.area_title {
+  position: relative;
+  padding-bottom: 15px;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.btn_basic_type02 {
+  width: 100px;
+  height: 34px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  color: #444;
+  margin-top: 27px;
+  border-radius: 4px;
+}
+.resume_photo {
+  border: 1px solid #000;
+  float: left;
+  flex-direction: column;
+  position: relative;
+  padding: 9px;
+  margin-right: 28px;
+  width: 120px;
+  height: 140px;
+  border: 1px solid #e9e9e9;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #fff;
+}
+.user_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+}
+.resume_write {
+  position: relative;
+  display: block;
+  padding: 34px 50px 35px;
+}
+.basic_info {
+  overflow: hidden;
+}
+#toggleBtn:hover {
+  background: #4876EF;
+  color:#fff;
+}
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.name {
+  margin: 3px 6px 0 0;
+  font-size: 26px;
+  line-height: 33px;
+  font-weight: bold;
+  color: #444;
+  letter-spacing: -2px;
+  display: inline-block;
+    overflow: visible;
+}
+.profile_sex {
+  display: inline-block;
+  overflow: visible;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: #646262;  
+  margin-top: 12px;
+  margin-left: 0;
+}
+.profile_cell_title {
+  margin-top: 5px;
+}
+.profile_birth_year {
+  color: #646262;
+  display: inline-block;
+  margin-left: 2px;
+}
+.standard_age {
+  color: #646262;
+  display: inline-block;
+  margin-left: 2px;
+}
+.resume_profile .basic_info dt {
+  float: left;
+  max-width: 120px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #444;
+  letter-spacing: -1px;
+  margin-right: 30px;
+}
+
+.resume_profile .basic_info dd {
+  overflow: hidden;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444;
+  word-break: break-all;
+}
+.profile_address_wrap {
+  padding-left: 9px;
+}
+#profile_name {
+  font-size: 26px;
+  padding: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+/* 기본상태,펼친 후 */
+
+
+.resume_row {
+  display: flex;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.point{
+  color:red;
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: 300;
+}
+.bar_title {
+  font-size: 15px;
+}
+.input_title {
+  float: left;
+  padding-top: 15px;
+  width: 150px;
+  color: #222;
+  font-size: 16px;
+  letter-spacing: -1px;
+  line-height: 21px;
+  font-weight: 300;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+input::-webkit-input-placeholder {
+  color:#646262;
+}
+.resume_input .box_input, .resume_select .box_input {
+  padding: 0 15px 0 25px;
+  width: 357px;
+  height: 50px;
+  border: 1px solid #dfdfdf;
+  box-sizing: border-box;
+  color: #222;
+  font-size: 16px;
+  line-height: 46px;
+  border-radius: 8px;
+}
+.resume_input .hasDatepicker {
+  width: 300px;
+}
+.lbl {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 34px;
+  width: 104px;
+  display: inline-block;
+  padding: 5px 14px 6px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  color: #646262;
+  letter-spacing: -1px;
+  text-align: center;
+  vertical-align: top;
+  background-color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+.inpRdoSw {
+  margin-left: 17px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.inOption {
+  float: left;
+  position: relative;
+}
+.inpRdoSw .inOption>input {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+}
+.link_text {
+  display: inline-block;
+  margin: 18px 0 0 17px;
+  font-size: 13px;
+  text-decoration: underline;
+  color: #646262;
+}
+.inpRdoSw .inOption>input:checked+.lbl {
+  position: relative;
+  z-index: 2;
+  border-color: #4876ef;
+  background-color: #4876ef;
+  color: #fff;
+}
+
+section {
+  border-top: 1px solid #f1f0f0;
+  background: #fbfbfb;
+  padding: 34px 50px 35px;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+/* section2  학력사항*/
+
+.ALL {
+  display: none;
+}
+.sec2_title_wrap {
+  justify-content: flex-start;
+}
+.title {
+  float: left;
+  color: #222;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: -2px;
+  line-height: 34px;
+}
+.txt_noti {
+  float: left;
+  margin-left: 20px;
+  padding-top: 20px;
+  color: #646262;
+  font-size: 14px;
+  letter-spacing: -1px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.section2 {
+  border-top: 1px solid #f1f0f0;
+  background: #fbfbfb;
+  padding: 34px 50px 35px;
+}
+.ele_school_label {
+  display: inline-block;
+}
+.ele_school {
+  padding: 0 15px 0 25px;
+  max-width: 410px;
+  height: 50px;
+  border: 1px solid #dfdfdf;
+  box-sizing: border-box;
+  color: #222;
+  font-size: 16px;
+  line-height: 46px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.ele_school_title{
+  padding-top: 70px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.section2_school {
+  text-align: center;
+}
+.school_value {
+  display: flex;
+  justify-content: space-around;
+  padding-inline-start: 0px;
+  margin-bottom: 70px;
+}
+.academic {
+  width: 220px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 20px 22px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 300;
+}
+.academic:hover {
+  background: #4876EF;
+  color:#fff;
+}
+.school_area_wrap{
+  display: flex;
+}
+.school_period{
+  display: flex;
+}
+.school_area {
+  margin-top: 10px;
+  margin-left: 3px;
+}
+.school_into{
+  display: flex;
+  margin-top: 20px;
+}
+.school_name {
+  overflow: hidden;
+  width: 150px;
+}
+.subtitle {
+  width: 140px;
+  display: inline-block;  
+  font-weight: 300;
+}
+.school_date {
+  line-height: 46px;
+  border: none;
+}
+.school_start {
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  padding: 0 5px;
+}
+select {
+  border: none;
+}
+.wave {
+  margin: 0 20px;
+  margin-top: 14px;
+}
+.Major {
+  margin-left: 143px;
+  margin-top: 10px;
+}
+
+.half {
+  width: 150px;
+}
+.grade {
+  padding: 0 15px 0 25px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #dfdfdf;
+    box-sizing: border-box;
+    color: #222;
+    font-size: 16px;
+    line-height: 46px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.high_form {
+  border-top: 1px dashed #ccc;
+}
+
+
+
+
+
+
+
+
+
+/* section3  경력사항*/
+
+
+
+.section3 {
+  max-width: 880px;
+  margin: auto;
+}
+.sec3_Career_title{  
+  color: #222;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: -2px;
+  line-height: 34px;
+}
+.ChoosingCareer {
+  display: flex;
+}
+.newWork  {  
+  width: 221px; 
+  height: 45px; 
+  position: relative;
+  z-index: 1;
+  border: 1px solid #d2d2d3;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 300;
+  font-size: 17px;
+  cursor: pointer;
+}
+.newWork:hover {
+  background: #4876EF;
+  color:#fff;
+  transition: 0.3s;
+}
+.oldWork:hover {
+  background: #4876EF;
+  color:#fff;
+  transition: 0.3s;
+
+}
+.oldWork {
+  width: 221px;
+  position: relative;
+  z-index: 1;
+  border: 1px solid #d2d2d3;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 300;
+  font-size: 17px;
+  cursor: pointer;
+
+}
+.Uncorrectable {
+  font-weight: 300;
+  margin-top: 30px;
+}
+.Work_career {
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+.Work_career_p {
+  font-weight: 300;
+  display: inline-block;
+  font-size: 13px;
+}
+.ofTime {
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+.max_length {
+  padding: 0 85px 0 25px;
+}
+.txt_number {
+  display: inline-block;
+  font-weight: 300;
+}
+.resume_input_half .box_input, .resume_input_half .box_input {
+  max-width: 206px;
+  margin-right: 5px;
+}
+
+.focus {
+  position: relative;  
+}
+.link_modifie {
+  position: absolute;  
+  top: 10px;
+  right: 10px;
+  color: #4876ef;
+  font-size: 14px;
+  line-height: 48px;
+  font-weight: 300;
+}
+.txt_desc_position {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 50px;
+  letter-spacing: -1px;
+  color: #999;
+  vertical-align: top;
+  margin-left: 150px;
+  font-weight: 300;
+}
+.title {
+  float: left;
+    color: #222;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 28px;
+}
+.txt_noti {
+  margin-left: 10px;
+  padding-top: 14px;
+  color: #646262;
+}
+.btn_add {
+  margin-left: 10px;
+  padding: 0 11px;
+  height: 37px;
+  border: 1px solid #dfdfdf;
+  color: #555;
+  font-size: 14px;
+  letter-spacing: -1px;
+  background: #fff;
+  margin-top: 20px;
+}
+.company_wrap {
+  position: relative;
+}
+
+.project_title {
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+.area_check {
+  margin: 17px 0 0 20px;
+  position: relative;
+}
+.area_check_label {
+  width: 18px;
+  border: 1px solid #e0e0e0;
+}
+.inp_check_ing {
+  opacity: 1;
+}
+.check_p {
+  display: inline-block;
+  font-weight: 300;
+}
+.project {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.pro_detail {
+  position: absolute;
+  top: 40px;
+}
+textarea {
+  margin-top: 40px;
+  width: 90%;
+  height: 110px;
+  border: 1px solid #fdfdfd;
+}
+
+.write_area {
+  position: relative;
+  margin-left: 150px;
+}
+.item_txt {
+  border: 1px solid #e6e6e6;
+  border-bottom: 0;
+  color: #666;
+  line-height: 22px;
+  word-break: break-all;
+  background: #fff;
+}
+.textarea_wrap {
+    height: auto;
+}
+.resume_row .bar_title {
+  position: absolute;
+  top: 16px;
+  left: 25px;
+  font-weight: 300;
+}
+.resume_row .bar_title {  
+  color: #646262;
+  font-size: 16px;
+  letter-spacing: -1px;
+}
+.resume_project .write_area .inner_wrap .textarea_type1 {
+  padding: 15px 15px 13px 25px;
+  min-height: 116px;
+  font-size: 16px;
+  color: #444;
+  letter-spacing: -1px;
+  line-height: 22px;
+  vertical-align: top;
+  resize: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+.write_area .item_edit {
+  display: block;
+  position: relative;
+  padding: 15px 40px 11px;
+  height: 50px;
+  border: 1px solid #e6e6e6;
+  border-top: 0;
+  box-sizing: border-box;
+  background: #fcfcfc;
+}
+.txt_length {
+  font-size: 14px;
+  color:#646262;
+}
+.title_length {
+  margin-right: 5px;
+  color: #646262;
+  font-size: 14px;
+  font-weight: bold;
+}
+.txt_byte {
+  color: #646262;
+  font-weight: 300;
+}
+.input-char {
+  font-weight: 300;
+}
+.input-byte {
+  font-weight: 300;
+}
+.write_area .item_edit .txt_length .bar {
+  display: inline-block;
+  width: 15px;
+  color: #646262;
+  font-size: 11px;
+  font-style: 300;
+  text-align: center;
+}
+.btn_delete {
+  margin-left: 10px;
+  padding: 0 11px;
+  height: 37px;
+  border: 1px solid #dfdfdf;
+  color: #555;
+  font-size: 14px;
+  letter-spacing: -1px;
+  background: #fff;
+}
+.area_period {
+  display: flex;
+}
+.resume_input .career_sum_year {
+  max-width: 150px;
+}
+
+.resume_input .total_title {
+  font-size: 13px;
+  color:#646262
+}
+.txt_period {
+  color:#646262;
+  margin:15px 5px 0 5px
+}
+
+
+
+
+
+
+
+
+
+/* section4  경험/활동/교육 */
+/* section5  자격증/어학/수상 내역 */
+
+.section4 {
+  margin-top: 100px;
+  max-width: 880px;
+}
+.experience {
+  position: relative;
+}
+.area_row_btn {
+  margin-left: 100px;
+}
+.box_textarea {
+  border: 1px solid #e2e2e2;
+}
+.area_add_btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.btn_experience_add {
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+  padding: 8px 12px
+}
+.naver_img_wrap {
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+}
+.sec5_img {
+  width: 100%;
+}
+.sec5_img_wrap {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.sec5_awarded {
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+}
+.naver_img_wrap2 {
+  margin-top: 0;
+}
+.section5 {
+  margin-top: 100px;
+  max-width: 880px;
+}
+
+
+
+
+
+
+
+
+/* section6 보유기술 및 능력 */
+
+.section6 {
+  margin-top: 100px;
+  max-width: 880px;
+}
+.skill_wrap {
+  position: relative;
+}
+.skill_wrap:before {
+  position: absolute;
+  top: 11px;
+  left: 147px;
+  width: 47px;
+  height: 46px;
+  background: #fff url('img/ico_search.png') 50% 50% no-repeat;
+  content: "";
+  cursor: pointer;
+}
+.skill_inp {
+  padding-left: 55px;
+  width: 600px;
+}
+.Storage_btn {
+  margin-left: 329px;
+}
+.fa-circle-xmark {
+  position: absolute;
+  top: 29px;
+  right: 140px;
+  color: #646262;
+  cursor: pointer;
+}
+.adobe_recom {
+  color:#646262;
+  font-size: 14px;
+  font-weight: 300;
+  margin-left: 150px;
+}
+.recom_skill {
+  font-size: 14px;
+  font-weight: 300;
+  margin-left: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #F8F8F8;
+  color: #999;
+  padding: 10px;
+  position: relative;
+}
+.Respectively_skill {
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 999px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.Refresh_wrap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  color:#4876EF;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.skillLi {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 300;
+  margin-left: 120px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  padding: 0 15px 30px 15px;
+  margin-top: 5px;
+}
+.skillTitleAdd {
+  color:#4876EF;
+  cursor: pointer;
+}
+.skillLevel {
+  display: inline-block;
+  width: 150px;
+}
+.haveSkill {
+  display: inline-block;
+}
+.skill_content {
+  display: flex;
+}
+dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.projectType, .DevelopType, .DesignType, .BusinessType {
+  display: none;
+}
+
+  
+
+.section4 , .section5,.section6, .section7 , .section10, .section9, .section11{
+  display: none;
+  margin-left: 0;
+}
+
+/* section7 취업 우대사항 */
+/* section8 포트폴리오 및 기타문서 */
+/* section9 경력 기술서 */
+
+
+.section7 , .section8, .section9 , .section10, .section11 {
+  margin-top: 100px;
+  max-width: 880px;
+  margin-left: 0;
+}
+.EmploymentP {
+  margin-left: 50px;
+}
+.EmploymentA {
+  color:#4876EF;
+  font-size: 14px;
+  font-weight: 300;
+}
+.EmploymentI {
+  color:#4876EF;
+}
+.workLine {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 50px 0;
+}
+.workLine:last-child {
+  border: none;
+}
+.sec8_wrap {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e6e6e6;
+  padding: 15px 25px;
+  font-size: 15px;
+  font-weight: 300;
+  align-items: center;
+}
+.fileSize, .fileDate {
+  color:#888
+}
+.titleURL {
+  text-decoration: underline;
+  color:#4876EF;
+}
+.portfolioAdd {
+  background: #717171;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 25px ;
+  font-weight: 300;
+  margin-top: 20px;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+}
+.item_sample {
+  background: #fff;
+  padding: 25px 20px;
+  border: 1px solid #e6e6e6;
+}
+.sec9_form {
+  font-weight: 300;
+}
+.btn_autocomplete_form {
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 999px;
+  padding: 8px 12px;
+  margin-left: 5px;
+}
+.btn_autocomplete_form:hover {
+  background:#4876EF;
+  color:#fff;
+}
+.trashIcon:hover {
+  color: #0437b9;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+.txtLabel {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+
+
+
+
+
+/* section8 포트폴리오 및 기타문서 추가 */
+
+
+.DocumentsWrap {
+  width: 646px;
+  border: 1px solid #525252;
+  position: relative;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  padding: 40px;
+  color:#515151;
+  display:none;
+}
+.DocuTitle {
+  display: flex;
+  position: relative;
+  margin-bottom:15px
+}
+.TitleAttachment {
+  font-size: 18px;
+}
+.AttachP {
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.AttachSpan {
+  color:red;
+}
+.FileDeleteBtn {
+  position: absolute;
+  right: 0;
+  background: #4876EF;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 999px;
+  padding: 0 2px 4px 2px;
+  cursor: pointer;
+}
+.FileDeleteBtn:hover {
+  background: none;
+  border: 1px solid #727272;
+  color:#727272;
+}
+.SortationP , .AttachSpan {
+  display:inline-block;
+}
+.FileTextBox {
+  font-size: 12px;
+  font-weight: 300;
+}
+.FileBtnBox {
+  text-align: center;
+  margin-top: 40px;
+}
+.FileBtn {
+  padding: 15px 35px;
+  border:none;
+}
+
+
+
+
+
+
+
+
+
+
+/* section10 자기 소개서  */
+
+.write_area .intro_item .item_title {
+  position: relative;
+  padding: 18px 40px 16px 40px;
+  height: 60px;
+  border: 1px solid #e6e6e6;
+  border-bottom: 0;
+  box-sizing: border-box;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+  word-break: break-all;
+  background: #fff;
+}
+.write_area .intro_item .item_title .input_wrap {
+  position: relative;
+  width: 520px;
+}
+.Sec10_titleP {
+  font-weight: 300;
+  color:#646262;
+  font-size: 14px;
+  display: inline-block;
+}
+.Sec10_Infor {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  font-size: 12px;
+  color:#646262;
+  padding: 12px 25px;
+}
+.sec10_title_wrap {
+  display: block;
+}
+.sec10_awarded {
+  display: inline-block;
+  margin-left: 30px;
+}
+.sec10_txt {
+  font-weight: 300;
+  color:#646262;
+  font-size: 13px;
+}
+.input_type10 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+.txt {
+  padding-left: 20px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+textarea:focus {
+  outline: none;
+}
+.portfolioAddBtn {
+  background: none;
+  border: none;
+  color:#fff;
+  
+}
+.portfolioAdd {
+  margin-bottom: -50px;
+}
+
+
+
+
+
+
+
+
+
+
+/* 자기소개서 항목예시  */
+
+.Self_introduction_wrap {
+  border: 1px solid #a7a7a7;
+  position: fixed;
+  align-items: center;
+  padding: 25px 30px 30px;
+  z-index: 100;
+  background: #fff;
+  width: 630px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-65%, -50%);
+  border-radius: 8px;
+  overflow: scroll;
+  display: none;
+}
+.Self_introduction_Title {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.Self_Item_Wrap {
+  display: flex;
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+}
+.Self_Item_Title {
+  background: #f0eeee;
+  width: 190px;
+}
+.Lettle_Item_Title {
+  font-weight: 300;
+  font-size: 13px;
+  color:#646262;
+  text-align: center;
+  padding: 0 20px;
+}
+.sec10_content {
+  font-weight: 300;
+  font-size: 13px;
+  color:#646262;
+  padding-left: 10px;
+  line-height: 25px;
+}
+.sec10_Title_Closed {
+  margin-left: 400px;
+  font-size: 30px;
+  color: #646262;
+}
+
+
+
+
+
+
+/* section11 인.적성 검사  */
+
+.noti_portfolio {
+  font-weight: 300;
+  color: #646262;
+  font-size: 13px;
+}
+.TestBoxWrap{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #dfdcdc;
+  align-items: center;
+  padding: 15px 30px;
+}
+.TestTitle {
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.TestBtn {
+  background: #fff;
+  border: 1px solid #c2c1c1;
+  padding: 8px 10px;
+  color: #646262;
+}
+.TestDate {
+  display: flex;
+}
+.TestTake , .Progress {
+  color:#646262;
+}
+.section11 {
+  margin-bottom: 150px;
+}
+
+
+
+
+
+
+
+
+  /******* aside **********/
+
+.nudge_wrap {
+  width: 260px;
+  position: fixed;
+  top: 96px;
+  left: 50%;
+  margin-left: 370px;
+}
+.box_change_order {
+  position: relative;
+  margin-top: 40px;
+}
+.title_tip {
+  padding: 0 0 8px 5px;
+  border-bottom: 1px solid #dadada;
+  box-sizing: border-box;
+  color: #222;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 30px;
+}
+.disabled {
+  color: #888;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+.disabledA {
+  color: #888;
+}
+.Essential {
+  font-size: 11px;
+}
+.link_change {
+  color: #888;
+  font-weight: bold;
+  display: block;
+  position: relative;
+  max-width: 240px;
+  line-height: 37px;
+  font-weight: 300;
+  font-size: 15px;
+}
+.check_on_click:hover {
+  background: #4876EF;
+  color:#fff;
+}
+.check_on {
+  color: #888;
+  font-weight: bold;
+  display: block;
+  position: relative;
+  max-width: 240px;
+  line-height: 37px;
+  font-weight: 300;
+  font-size: 15px;
+}
+.btn_check {
+  border: 1px solid #ccc;
+  background: url('./img/plus_empty_icon.png');
+  color:#000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 30px;
+  border-radius: 20px;  
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-bottom: 2px;
+  position: absolute;
+  right: 0;
+  font-size: 13px;
+  font-weight: 300;
+}
+/* .check_on_click {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #4876ef;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-bottom: 2px;
+  position: absolute;
+  right: 0;
+  font-size: 13px;
+  font-weight: 300;
+} */
+.Exception {
+  margin-left: 3px;
+}
+.area_btn {
+  margin-top: 15px;
+  width: 260px;
+  margin: auto;
+}
+.btn_big_type {
+  margin-top: 3px;
+  width: 100%;
+  height: 60px;
+  border: 1px solid #dfdfdf;
+  box-sizing: border-box;
+  color: #666;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 56px;
+  text-align: center;
+  vertical-align: top;
+  background-color: #fff;
+  background: transparent;
+  cursor: pointer;
+}
+.save_time {
+  display: block;
+  margin-top: 2px;
+  color: #888;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 16px;
+  cursor: pointer;
+}
+.btn_big_type2 {
+  color: #fff;
+  background-color: #686868;
+}
+.area_same_time {
+  margin: 20px 0;
+}
+.sri_check {
+  vertical-align: top;
+  display: inline-block;
+  position: relative; 
+  cursor: pointer;
+}
+.inp_check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  z-index: 100;
+}
+.txt_check {
+  float: left;
+  font-weight: 300;
+  padding: 0 0 0 24px;
+  display: block;
+  height: 18px;
+  color: #444;
+  font-size: 13px;
+  letter-spacing: -1px;
+  line-height: 15px;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /******* aside 미리보기 **********/
+
+
+
+  
+  .Pre_Wrap {
+    max-width: 980px;
+    margin: auto;
+    overflow-y: scroll;
+  }
+  .box_btnline {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .txt_error {
+    color: red;
+    font-size: 13px;
+    font-weight: 300;
+  }
+  
+  .previeW {
+    width: 100%;
+  }
+  .Pre_Title {
+    font-size: 27px;
+    border-bottom: 1px solid #646262;
+  }
+  .Basics {
+    display: flex;
+  }
+  .box_photo_Basics {
+    display: table-cell;
+    width: 120px;
+    height: 158px;
+    border: 1px solid #c9c9c9;
+    overflow: hidden;
+    margin-right: 28px;
+  }
+  .ImgWrap {
+    width: 106px;
+    height: 146px;
+    overflow: hidden;
+    padding-left: 7px;
+    padding-top: 7px;    
+  }  
+  .photo {
+    width: 100%;
+  }
+  .PreNameWrap {
+    display: flex;
+    align-items: center;
+  }
+  .PreName {
+    font-size: 22px;
+  }
+  .PreAge {
+    font-weight: 300;
+    margin-left: 20px;
+  }
+  .MiddliLine {
+    margin-left: 10px;
+
+  }
+  .PreGender {
+    font-weight: 300;
+    margin-left: 10px;
+  }
+  .EmailBox, .CellphoneBox, .TelBox , .AddressBox {
+    font-weight: 300;
+    font-size: 15px;
+    color:#646262;
+  }
+
+  
+  .simple {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    border: 1px solid #faf9f9;
+    padding: 20px 25px;
+    background: #f0f0f0;
+  }
+  .Sim_Col {
+    border-right: 1px solid #dddddd;
+    padding-right: 7px;
+    text-align: center;
+  }
+  .Sim_Col:last-child {
+    border: none;
+  }
+  .Sim_Col_P {
+    font-size: 15px;
+  }
+  .Sim_Col_Span{
+    font-weight: 300 ;
+    font-size: 14px;
+  }
+
+
+
+
+
+  /* 학력 */
+
+
+  .Pre_Level_Wrap {
+    margin-top: 30px;
+  }
+  .PreShool {
+    font-size: 22px;
+    display: inline-block;
+  }
+  .PreFinal {
+    display: inline-block;
+    font-weight: 300;
+    margin-left: 10px;
+  }
+  table {
+    width: 100%;
+    margin-left:auto; 
+    margin-right:auto;
+    border-collapse : collapse;
+    border-spacing : 0;
+  }
+  
+  th, td {
+    text-align: left;
+    border: 1px solid #dddddd;
+    padding: 15px 0;
+    font-weight: 300;
+    font-size: 15px;
+    padding-left: 20px;
+  }
+  .PreYear {
+    color:red
+  }
+  .RoundMark {
+    right: 520px;
+    font-size: 30px;
+  }
+  thead {
+    background: #f0f0f0;
+  }  
+  .Round {
+    border: 1px solid #dddddd;
+    background: #fff;
+    border-radius: 999px;
+    padding: 3px 10px;
+    
+  }
+.Pre_Level {
+  border-bottom: 1px solid #575757;
+}
+.Prot_Focus {
+  cursor: pointer;
+}
+
+
+
+
+/* 포트폴리오 자세히 보기 클릭 */
+.DetailWrap {
+  width: 620px;
+  margin: auto;
+  background: #fff;
+  border: 1px solid #bbb9b9;
+  margin-bottom: 100px;
+  display: none;
+}
+.DetailBox {
+  padding: 20px ;
+}

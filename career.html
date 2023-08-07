@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="career.css">
+  <link rel="stylesheet" href="reponcive.css">
+  <title>career</title>
+  <script src="https://kit.fontawesome.com/c9574cea71.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    
+    <!-- gnb버튼 클릭시 화면 어둡게 -->
+    <div class="dark"></div>
+
+    <!-- 스크롤 맨위로 -->
+    <div class="UpBtnWrap" id="scrollToTopBtn">
+      <i class="fa-solid fa-circle-arrow-up UpBtn" ></i>
+    </div>
+
+    <div class="content" id="scroller">
+      <div class="resume">
+        <div class="SideBtnWrap gnbBtn" >
+          <i class="fa-solid fa-list SideBtn"></i>
+        </div>
+        <form action="">
+          <section class="section1 resume_section">
+            <div class="area_title">
+              <h3 class="section1_title">기본정보</h3>            
+              <button id="toggleBtn" class="btn_basic_type02 basic_edit_btn" type="button">수정하기</button>
+            </div>
+            <!-- 기본상태,펼치기 전 -->
+            <div id="showBox" class="resume_write resume_profile show">            
+              <div class="resume_photo">
+                <a href="" class="box_photo">
+                  <img src="img/pexels-andrea-piacquadio-774909.jpg" alt="" class="user_image">
+                </a>
+              </div>
+              <di class="basic_info">
+                <dd class="name" id="profile_name">정재훈</dd>
+                <dd class="profile_sex">여,</dd>                
+                <dd class="profile_birth_year">1976</dd>
+                <dd class="standard_age">(만46세)</dd>                
+              </di>
+              <div class="basic_info">
+                <dl>
+                  <dt>이메일</dt>
+                  <dd class="profile_email">hotfix0660@naver.com</dd>
+                  <dt class="profile_cell_title">휴대폰</dt>
+                  <dd class="profile_cell">010-6259-0660</dd>
+                  <dt class="profile_cell_title">주  소</dt>
+                  <dd class="profile_address_wrap">
+                    <span class="profile_address_main">경기 의왕시 원골로</span>
+                    <span class="profile_address_detail">10 2-308(오전동, 신안아파트)</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <!-- 수정 상태,펼치기 후 -->
+            <div id="hideBox" class="resume_write resume_basic hide">
+              <div class="resume_row">
+                <div class="input_title">이름
+                  <span class="point">필수</span>
+                </div>
+                <div class="resume_input focus">
+                  <label for="user_nm" class="bar_title "></label>
+                  <input type="text" name="user_nm" class="box_input Appearing" maxlength="20" value="정재훈">
+                </div>
+              </div>
+              <div class="resume_row">
+                <div class="input_title">생년월일
+                  <span class="point">필수</span>
+                </div>
+                <div class="resume_input focus">
+                  <label for="birth_dt" class="bar_title">
+                  </label>
+                  <input type="date" id="birth_dt" name="birth_dt" value="19761225" class="box_input expect_date hasDatepicker" data-dateformat="yymmdd" data-only-number="true" autocomplete="off" maxlength="8">
+                </div>
+                <div class="inpRdoSw sizeXL resume_right">
+                  <span class="inOption">
+                    <input type="radio" name="sex" value="male">
+                    <label for="male" class="lbl">남</label>
+                  </span>
+                  <span class="inOption">
+                    <input type="radio" name="sex" value="female" checked>
+                    <label for="female" class="lbl">여</label>
+                  </span>
+                </div>
+              </div>
+              <div class="resume_row">
+                <div class="input_title">
+                  이메일
+                  <span class="point">필수</span>
+                </div>
+                <div class="resume_input focus">
+                  <label for="user_email" class="bar_email"></label>
+                  <input type="email" name="user_email" class="box_input Appearing"value="email">
+                </div>             
+                
+              </div>
+              <div class="resume_row">
+                <div class="input_title">
+                  휴대폰
+                  <span class="point">필수</span>
+                </div>
+                <div class="resume_input focus">
+                  <label for="user_tel" class="bar_tel"></label>
+                  <input type="tel" name="user_tel" class="box_input Appearing"value="전화번호">
+                </div>
+                
+              </div>
+              <div class="resume_row">
+                <div class="input_title">
+                  주소
+                  <span class="point">필수</span>
+                </div>
+                <div class="resume_input focus">
+                  <label for="user_address" class="bar_address"></label>
+                  <input type="address" name="user_address" class="box_input Appearing"value="주소">
+                </div>
+              </div>
+            </div>       
+          </section>
+          <!--  section2  학력사항 -->
+          <section class="section2">
+            <div class="area_title sec2_title_wrap">
+              <h3 class="title">학력사항</h3>            
+              <p class="txt_noti">최종학력 선택 후 학력사항을 입력하세요</p>              
+            </div>
+            <div class="section2_school">
+              <ul class="school_value">
+                <li class="academic school_elementary">초등학교 졸업</li>               
+                <li class="academic school_middle">중학교 졸업</li>
+                <li class="academic school_high">고등학교 졸업</li>
+                <li class="academic school_college">대학.대학원 이상 졸업</li>
+              </ul>
+            </div>
+            <div class="ALL elementary_form_Wrap">
+              <form class="elementary_form">
+                <h4 class="ele_school_title">초등학교 정보 입력</h4>
+                <div class="school_wrap">
+                  <label for="ele_school" class="subtitle ele_school_label">학교명
+                    <span class="point">필수</span>
+                  </label>
+                  <input type="text" id="ele_school" class="ele_school" placeholder="초등학교명 입력">
+                </div>
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">지 역</h4>
+                  <select class="school_area ele_school">
+                    <option value="choice">지역  선택</option>
+                    <option value="서울">서울</option>
+                    <option value="경기">경기</option>
+                    <option value="강원">강원</option>
+                    <option value="충남">충남</option>
+                    <option value="충북">충북</option>
+                    <option value="경남">경남</option>
+                    <option value="경북">경북</option>
+                    <option value="전북">전북</option>
+                    <option value="전남">전남</option>
+                    <option value="제주">제주</option>
+                    <option value="해외">해외</option>
+                  </select>
+                </div>
+                <div class="school_period">
+                  <div class="school_name">
+                    <h4 class="subtitle school_information">재학기간<span class="point">졸업여부 필수</span></h4>
+                    
+                  </div>
+                  <div class="school_into">
+                    <div class="school_start">
+                      <label for="school_date"><input type="date" class="school_date"></label>                  
+                      <select name="" id="school_date" class="school_date">
+                        <option value="입학">입학</option>
+                      </select>
+                    </div>                
+                    <span class="wave"> ~ </span>
+                    <div class="school_start">
+                      <label for="school_date"><input type="date" class="school_date"></label>                  
+                      <select name="" id="school_date" class="school_date">
+                        <option value="졸업">졸업</option>
+                      </select>
+                    </div> 
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="ALL middle_form_Wrap">
+              <form class="middle_form">
+                <h4 class="ele_school_title">중학교 정보 입력</h4>
+                <div class="school_wrap">
+                  <label for="ele_school" class="subtitle ele_school_label">학교명
+                    <span class="point">필수</span>
+                  </label>
+                  <input type="text" id="ele_school" class="ele_school" placeholder="중학교명 입력">
+                </div>
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">지 역</h4>
+                  <select class="school_area ele_school">
+                    <option value="choice">지역  선택</option>
+                    <option value="서울">서울</option>
+                    <option value="경기">경기</option>
+                    <option value="강원">강원</option>
+                    <option value="충남">충남</option>
+                    <option value="충북">충북</option>
+                    <option value="경남">경남</option>
+                    <option value="경북">경북</option>
+                    <option value="전북">전북</option>
+                    <option value="전남">전남</option>
+                    <option value="제주">제주</option>
+                    <option value="해외">해외</option>
+                  </select>
+                </div>
+                <div class="school_period">
+                  <div class="school_name">
+                    <h4 class="subtitle school_information">재학기간<span class="point">졸업여부 필수</span></h4>
+                    
+                  </div>
+                  <div class="school_into">
+                    <div class="school_start">
+                      <label for="school_date"><input type="date" class="school_date"></label>                  
+                      <select name="" id="school_date" class="school_date">
+                        <option value="입학">입학</option>
+                      </select>
+                    </div>                
+                    <span class="wave"> ~ </span>
+                    <div class="school_start">
+                      <label for="school_date"><input type="date" class="school_date"></label>                  
+                      <select name="" id="school_date" class="school_date">
+                        <option value="졸업">졸업</option>
+                      </select>
+                    </div> 
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="ALL high_form_Wrap">
+              <form class="high_form">
+                <h4 class="ele_school_title">고등학교 정보 입력</h4>
+                <div class="school_wrap">
+                  <label for="ele_school" class="subtitle ele_school_label">학교명
+                    <span class="point">필수</span>
+                  </label>
+                  <input type="text" id="ele_school" class="ele_school" placeholder="고등학교명 입력">
+                </div>              
+                <div class="school_period">
+                  <div class="school_name">
+                    <h4 class="subtitle school_information">재학기간<span class="point">필수</span></h4>                  
+                  </div>
+                  <div class="school_into">
+                    <div class="school_start">
+                      <label for="school_date"><input type="date" class="school_date"></label>               
+                      </div>                
+                    <span class="wave"> ~ </span>
+                    <div class="school_start">
+                      <label for="school_date"><input type="date" class="school_date"></label>                 
+                    </div> 
+                  </div>
+                </div>
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">졸업여부<span class="point">필수</span></h4>
+                  <select class="school_area ele_school">
+                    <option value="졸업">졸업</option>
+                    <option value="재학중">재학중</option>
+                    <option value="휴학중">휴학중</option>
+                    <option value="수료">수료</option>
+                    <option value="중퇴">중퇴</option>
+                    <option value="자퇴">자퇴</option>
+                    <option value="졸업예정">졸업예정</option>
+                  </select>
+                </div>
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">전공계열</h4>
+                  <select class="school_area ele_school">
+                    <option value="전공계열선택">전공계열선택</option>
+                    <option value="문과계열">문과계열</option>
+                    <option value="이과계열">이과계열</option>
+                    <option value="전문(실업)계">전문(실업)계</option>
+                    <option value="예체능계">예체능계</option>
+                    <option value="특성화/마이스터고">특성화/마이스터고</option>
+                    <option value="특수목적고">특수목적고</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="ALL high_college_wrap">
+              <form action="" class="college_form">
+                <h4 class="ele_school_title">대학.대학원 정보 입력</h4>
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">대학<span class="point">필수</span></h4>
+                  <select class="school_area ele_school">
+                    <option value="대학(2.3년)">대학(2.3년)</option>
+                    <option value="대학(4년)">대학(4년)</option>
+                    <option value="이과계열">이과계열</option>
+                    <option value="대학원(석사)">대학원(석사)</option>
+                    <option value="대학원(박사)">대학원(박사)</option>
+                  </select>
+                </div>
+                <div class="school_wrap">
+                  <label for="ele_school" class="subtitle ele_school_label">학교명
+                    <span class="point">필수</span>
+                  </label>
+                  <input type="text" id="ele_school" class="ele_school" placeholder="대학명 입력">
+                </div>
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">지 역</h4>
+                  <select class="school_area ele_school">
+                    <option value="choice">지역  선택</option>
+                    <option value="서울">서울</option>
+                    <option value="경기">경기</option>
+                    <option value="강원">강원</option>
+                    <option value="충남">충남</option>
+                    <option value="충북">충북</option>
+                    <option value="경남">경남</option>
+                    <option value="경북">경북</option>
+                    <option value="전북">전북</option>
+                    <option value="전남">전남</option>
+                    <option value="제주">제주</option>
+                    <option value="해외">해외</option>
+                  </select>
+                </div>
+                <div class="school_period">
+                  <div class="school_name">
+                    <h4 class="subtitle school_information">재학기간</h4>                  
+                  </div>
+                  <div class="school_into">
+                    <div class="school_start">
+                      <label for="school_date"><input type="date" class="school_date"></label>               
+                      </div>                
+                    <span class="wave"> ~ </span>
+                    <div class="school_start">
+                      <label for="school_date"><input type="date" class="school_date"></label>                 
+                    </div> 
+                  </div>
+                </div>
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">졸업여부<span class="point">필수</span></h4>
+                  <select class="school_area ele_school">
+                    <option value="대학(2.3년)">대학(2.3년)</option>
+                    <option value="대학(4년)">대학(4년)</option>
+                    <option value="이과계열">이과계열</option>
+                    <option value="대학원(석사)">대학원(석사)</option>
+                    <option value="대학원(박사)">대학원(박사)</option>
+                  </select>
+                </div>
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">전 공<span class="point">필수</span></h4>
+                  <select class="school_area ele_school">
+                    <option value="어문학">어문학</option>
+                    <option value="영어/영문">영어/영문</option>
+                    <option value="중어/중문">중어/중문</option>
+                    <option value="일어/일문">일어/일문</option>
+                    <option value="국어/국문">국어/국문</option>
+                    <option value="인문과학">인문과학</option>
+                    <option value="사회과학">사회과학</option>
+                    <option value="상경계열">상경계열</option>
+                    <option value="졍제/경영">졍제/경영</option>
+                    <option value="회계학">회계학</option>
+                    <option value="법학계열">법학계열</option>
+                    <option value="사범계열">사범계열</option>
+                    <option value="종교학">종교학</option>
+                    <option value="생활과학">생활과학</option>
+                    <option value="예/체능">예/체능</option>
+                    <option value="자연과학계열">자연과학계열</option>
+                    <option value="농수산/해양/축산">농수산/해양/축산</option>
+                    <option value="수학/통계학">수학/통계학</option>
+                    <option value="물리/천문/기상학">물리/천문/기상학</option>
+                    <option value="화학/생물">화학/생물</option>
+                    <option value="공학계열">공학계열</option>
+                    <option value="전기/전자/정보통신공학">전기/전자/정보통신공학</option>
+                    <option value="컴퓨터/시스템공학">컴퓨터/시스템공학</option>
+                    <option value="금속/비금속공학">금속/비금속공학</option>
+                    <option value="생명/화학/환경/바이오">생명/화학/환경/바이오</option>
+                    <option value="도시/토목/건축공학">도시/토목/건축공학</option>
+                    <option value="에너지/원자력공학">에너지/원자력공학</option>
+                    <option value="산업/자동차/우주공학">산업/자동차/우주공학</option>
+                    <option value="기계/조선/항공공학">기계/조선/항공공학</option>
+                    <option value="신소재/재료/섬유공학">신소재/재료/섬유공학</option>
+                    <option value="식품/유전/안전공학">식품/유전/안전공학</option>
+                    <option value="의학계열">의학계열</option>
+                    <option value="직접입력">직접입력</option>
+                  </select>
+                </div>
+                <div class="school_wrap">                
+                  <input type="text" id="ele_school" class="ele_school Major" placeholder="학교명 입력">
+                </div>
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">주/야간</h4>
+                  <select class="school_area ele_school">
+                    <option value="주간">주간</option>
+                    <option value="야간">야간</option>
+                  </select>
+                </div>
+                <div class="school_wrap half_wrap">
+                  <label for="ele_school" class="subtitle ele_school_label">학점
+                  </label>
+                  <input type="text" id="ele_school" class="ele_school half" placeholder="학점">                
+                  <select name="" id="" class="grade">
+                    <option value="기준학점선택">기준학점선택</option>
+                    <option value="4.5">4.5</option>
+                    <option value="4.5">4.0</option>
+                    <option value="4.5">4.3</option>
+                    <option value="4.5">3.0</option>
+                    <option value="4.5">7.0</option>
+                    <option value="4.5">100</option>
+                  </select>
+                  <div class="school_wrap">
+                    <label for="ele_school" class="subtitle ele_school_label">논문&졸업작품
+                    </label>
+                    <input type="text" id="ele_school" class="ele_school" placeholder="학위논문 및 졸업작품 입력">
+                  </div>                  
+                </div>
+              </form>         
+            </div>
+            <div class="last_school_wrap">
+              <form action=""class="high_form">
+                <div class="last_school">
+                  <div class="school_area_wrap">
+                    <h4 class="subtitle">최종학력<span class="point">필수</span></h4>
+                    <select class="school_area ele_school">
+                      <option value="최종학력선택">최종학력선택</option>
+                      <option value="대학원졸업">대학원졸업</option>
+                      <option value="대학교졸업예정">대학교졸업예정</option>
+                      <option value="대학교중퇴">대학교중퇴</option>
+                      <option value="대학(2.4년)졸업">대학(2.4년)졸업</option>
+                      <option value="고등학교졸업">고등학교졸업</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <!-- section3  경력사항 부분-->
+          <section class="section3">
+            <div class="section3_wrap">
+              <h3 class="sec3_Career_title">경력 사항</h3>
+              <div class="ChoosingCareer">
+                <div class="newWork">신입</div>
+                <div class="oldWork">경력</div>                
+              </div>
+              <p class="Uncorrectable"><span><i class="fa-regular fa-square-check"></i></span>
+                '인증된 경력'은 구직자 본인이 확인한 사항이며 회사명, 재직기간은 수정이 불가합니다.</p>
+              <div class="Work_career">
+                <p class="Work_career_p">※입사지원시 경력사항은 신입으로 표기되며 작성한 경력내용이 출력됩니다(단,총 경력년수는 출력되지 않습니다.)</p>
+                
+              </div>
+              <!-- ////////신입부분 -->
+              <form class="high_form company_form Newcomer">                
+                <div class="school_wrap company_wrap">
+                  <h2>신입 사항</h2>
+                  <label for="ele_school" class="subtitle ele_school_label">회사명
+                    <span class="point">필수</span>
+                  </label>
+                  <input type="text" id="ele_school" class="ele_school" placeholder="회사명 입력">
+                </div>              
+                <div class="school_period">
+                  <div class="school_name">
+                    <h4 class="subtitle school_information">재직기간<span class="point">필수</span></h4>                  
+                  </div>
+                  <div class="school_into">
+                    <div class="school_start">
+                      <label for="school_date"><input type="date" class="school_date"></label>               
+                      </div>                
+                    <span class="wave"> ~ </span>
+                    <div class="school_start">
+                      <label for="school_date"><input type="date" class="school_date"></label>                  
+                      <select name="" id="school_date" class="school_date">
+                        <option value="합격구분 선택">합격구분 선택</option>
+                        <option value="퇴사">퇴사</option>
+                        <option value="재직중">재직중</option>
+                      </select>                      
+                    </div> 
+                    <p class="ofTime">(4년 1개월)</p>
+                  </div>
+                </div>
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">퇴사사유</h4>
+                  <select class="school_area ele_school">
+                    <option value="퇴사사유 선택">퇴사사유 선택</option>
+                    <option value="업직종 전환">업직종 전환</option>
+                    <option value="근무조건">근무조건</option>
+                    <option value="경영악화">경영악화</option>
+                    <option value="계약만료">계약만료</option>
+                    <option value="출산/육아">출산/육아</option>
+                    <option value="학업">학업</option>
+                    <option value="유학">유학</option>
+                    <option value="개인사정">개인사정</option>
+                    <option value="직접입력">직접입력</option>
+                  </select>
+                </div>
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">직급/직책</h4>
+                  <div class="resume_input_half focus">
+                    <label for="career_job_grade_duties_1690761050" class="bar_title"></label>
+                      <input type="text" class="box_input max_length ele_school half " id="career_job_grade_duties_1690761050">
+                      <a href="#"class="link_modifie">선택하기</a>                    
+                  </div>
+                  <div class="resume_input_half focus">
+                    <label for="career_year_1690761050" class="bar_title"></label>
+                      <input type="text" class="box_input max_length ele_school half " id="career_year_1690761050" maxlength="2">
+                      <p class="txt_number">년차</p>                   
+                  </div>                   
+                </div>
+                <div class="school_wrap company_wrap">
+                  <label for="ele_school" class="subtitle ele_school_label">근무부서                    
+                  </label>
+                  <input type="text" id="ele_school" class="ele_school" placeholder="근무부서 입력">
+                  <p class="txt_desc_position"><i class="fa-solid fa-circle-exclamation"></i>인사담당자가 중요하게 검토하는 부분입니다</p>
+                </div>                 
+                <div class="school_area_wrap">
+                  <h4 class="subtitle">근무지역</h4>
+                  <select class="school_area ele_school">
+                    <option value="근무지역 선택">근무지역 선택</option>
+                    <option value="서울">서울</option>
+                    <option value="강원">강원</option>
+                    <option value="경기">경기</option>
+                    <option value="충청도">충청도</option>
+                    <option value="경상도">경상도</option>
+                    <option value="전라도">전라도</option>
+                    <option value="제주도">제주도</option>
+                    <option value="해외">해외</option>
+                  </select>
+                </div>
+                <div class="school_wrap company_wrap">
+                  <label for="ele_school" class="subtitle ele_school_label">연봉                   
+                  </label>
+                  <input type="text" id="ele_school" class="ele_school half" placeholder="금액">
+                  
+                  <select name="" id="price"class="ele_school half" >
+                    <option value="만원">만 원</option>
+                    <option value="달 러">달 러</option>
+                    <option value="엔"> 엔 </option>
+                  </select>
+                </div> 
+                <div class="school_wrap company_wrap">
+                  <label for="ele_school" class="subtitle ele_school_label">담당 업무                   
+                  </label>
+                  <input type="text" id="ele_school" class="ele_school" placeholder="담당업무 입력">
+                </div>                               
+              </form>   
+
+          <!-- section3  경력사항 부분////////경력부분-->
+          <form class="high_form company_form experienced ">                
+            <div class="school_wrap company_wrap">
+              <h2>경력사항</h2>
+              <label for="ele_school" class="subtitle ele_school_label">회사명
+                <span class="point">필수</span>
+              </label>
+              <input type="text" id="ele_school" class="ele_school" placeholder="회사명 입력">
+            </div>              
+            <div class="school_period">
+              <div class="school_name">
+                <h4 class="subtitle school_information">재직기간<span class="point">필수</span></h4>                  
+              </div>
+              <div class="school_into">
+                <div class="school_start">
+                  <label for="school_date"><input type="date" class="school_date"></label>               
+                  </div>                
+                <span class="wave"> ~ </span>
+                <div class="school_start">
+                  <label for="school_date"><input type="date" class="school_date"></label>                  
+                  <select name="" id="school_date" class="school_date">
+                    <option value="합격구분 선택">합격구분 선택</option>
+                    <option value="퇴사">퇴사</option>
+                    <option value="재직중">재직중</option>
+                  </select>                      
+                </div> 
+                <p class="ofTime">(4년 1개월)</p>
+              </div>
+            </div>
+            <div class="school_area_wrap">
+              <h4 class="subtitle">퇴사사유</h4>
+              <select class="school_area ele_school">
+                <option value="퇴사사유 선택">퇴사사유 선택</option>
+                <option value="업직종 전환">업직종 전환</option>
+                <option value="근무조건">근무조건</option>
+                <option value="경영악화">경영악화</option>
+                <option value="계약만료">계약만료</option>
+                <option value="출산/육아">출산/육아</option>
+                <option value="학업">학업</option>
+                <option value="유학">유학</option>
+                <option value="개인사정">개인사정</option>
+                <option value="직접입력">직접입력</option>
+              </select>
+            </div>
+            <div class="school_area_wrap">
+              <h4 class="subtitle">직급/직책</h4>
+              <div class="resume_input_half focus">
+                <label for="career_job_grade_duties_1690761050" class="bar_title"></label>
+                  <input type="text" class="box_input max_length ele_school half " id="career_job_grade_duties_1690761050">
+                  <a href="#"class="link_modifie">선택하기</a>                    
+              </div>
+              <div class="resume_input_half focus">
+                <label for="career_year_1690761050" class="bar_title"></label>
+                  <input type="text" class="box_input max_length ele_school half " id="career_year_1690761050" maxlength="2">
+                  <p class="txt_number">년차</p>                   
+              </div>                   
+            </div>
+            <div class="school_wrap company_wrap">
+              <label for="ele_school" class="subtitle ele_school_label">근무부서                    
+              </label>
+              <input type="text" id="ele_school" class="ele_school" placeholder="근무부서 입력">
+              <p class="txt_desc_position"><i class="fa-solid fa-circle-exclamation"></i>인사담당자가 중요하게 검토하는 부분입니다</p>
+            </div>                 
+            <div class="school_area_wrap">
+              <h4 class="subtitle">근무지역</h4>
+              <select class="school_area ele_school">
+                <option value="근무지역 선택">근무지역 선택</option>
+                <option value="서울">서울</option>
+                <option value="강원">강원</option>
+                <option value="경기">경기</option>
+                <option value="충청도">충청도</option>
+                <option value="경상도">경상도</option>
+                <option value="전라도">전라도</option>
+                <option value="제주도">제주도</option>
+                <option value="해외">해외</option>
+              </select>
+            </div>
+            <div class="school_wrap company_wrap">
+              <label for="ele_school" class="subtitle ele_school_label">연봉                   
+              </label>
+              <input type="text" id="ele_school" class="ele_school half" placeholder="금액">
+              
+              <select name="" id="price"class="ele_school half" >
+                <option value="만원">만 원</option>
+                <option value="달 러">달 러</option>
+                <option value="엔"> 엔 </option>
+              </select>
+            </div> 
+            <div class="school_wrap company_wrap">
+              <label for="ele_school" class="subtitle ele_school_label">담당 업무                   
+              </label>
+              <input type="text" id="ele_school" class="ele_school" placeholder="담당업무 입력">
+            </div>                            
+          </form>
+          <div class="project">
+            <h4 class="title">프로젝트 수행능력</h4>
+            <p class="txt_noti">프로젝트 수행이력이 있는 경우 수행 능력을 작성해 보세요!</p>  
+            <button class="btn_add btn_resume_add">프로젝트 수행이력 추가 <i class="fa-solid fa-plus"></i></button>
+          </div> 
+              <!-- section3  경력사항 끝-->
+
+              <!-- 프로젝트 수행이력 추가 -->
+              <div class="appear_project_wrap">
+                <form action="" class="appear_project">
+                  <div class="project">
+                    <h4 class="title">프로젝트 수행능력</h4>
+                    <p class="txt_noti">프로젝트 수행이력이 있는 경우 수행 능력을 작성해 보세요!</p>  
+                    <button class="btn_add btn_resume_add">최근 활동 순 정렬 <i class="fa-solid fa-arrow-up-short-wide"></i></button>
+                    </div> 
+                    <div class="school_wrap company_wrap">
+                      <label for="ele_school" class="subtitle ele_school_label project_title">프로젝트명                   
+                      </label>
+                      <input type="text" id="ele_school" class="ele_school" placeholder="프로젝트명 입력">
+                    </div> 
+                    <div class="school_period">
+                      <div class="school_name">
+                        <h4 class="subtitle school_information">수행기간</h4>                  
+                      </div>
+                      <div class="school_into">
+                        <div class="school_start">
+                          <label for="school_date"><input type="date" class="school_date"></label>               
+                          </div>                
+                        <span class="wave"> ~ </span>
+                        <div class="school_start">
+                          <label for="school_date"><input type="date" class="school_date"></label>                 
+                        </div>                     
+                      </div>
+                      <div class="area_check">
+                        
+                        <input type="checkbox" id="project_progress_status_1690848148645" name="project_progress_status[]" class="inp_check_ing" >
+                        <p class=" check_p">진행중</p>
+                      </div>
+                    </div>
+                    <div class="resume_row">
+                      <div class="school_wrap company_wrap">
+                        <label for="ele_school" class="subtitle ele_school_label pro_detail">상세내용                   
+                        </label>
+                      </div> 
+                    <div class="write_area">
+                      <div class="inner_wrap">
+                        <div class="item_txt">
+                          <div class="textarea_wrap">
+                            <label for="res_career_project_contents_1690848148645" class="bar_title" style="display: block;">
+                              <span class="valid_hidden">프로젝트에 대한 내용과 본인이 수행한 업무 및 직무 기술을 작성해보세요.</span>
+                            </label>
+                            <textarea id="res_career_project_contents_1690848148645" name="res_career_project_contents[]" class="textarea_type1" rows="1" cols="100" data-char-count="true" maxlength="3000"></textarea>
+                          </div>
+                        </div> 
+                        <div class="item_edit">
+                          <div class="txt_length">
+                            <strong class="title_length">총 글자수 </strong>
+                            <span class="txt_byte">(공백포함) <strong class="input-char">0</strong> 자 / <strong class="input-byte">0</strong> byte</span>
+                            <span class="txt_byte">(공백제외) <strong class="input-char">0</strong> 자 / <strong class="input-byte">0</strong> byte</span>
+                          </div>
+                        </div>                      
+                        </div>
+                        <div class="area_row_btn">
+                          <button type="button" class="btn_resume_delete btn_delete">프로젝트 수행이력 삭제 <i class="fa-solid fa-xmark"></i></button>
+                          <button type="button" class="btn_add btn_resume_add">프로젝트 수행이력 추가 <i class="fa-solid fa-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- 프로젝트 수행이력 추가 끝 -->
+              <div class="career_total" id="career_total">
+                <div class="area_total_career">
+                  <div class="resume_row">
+                    <div class="input_title">
+                      총경력
+                      <span class="point">필수</span>
+                    </div>
+                    <div class="area_period">
+                      <div class="resume_input focus">
+                        <label for="career_period_year" class="bar_title total_title"></label>
+                        <input type="text" id="career_period_year" name="career_period_year" class="box_input career_sum_year"  readonly="" maxlength="2" data-only-number="true">
+                      </div>
+                      <span class="txt_period">년</span>
+                      <div class="resume_input focus">
+                        <label for="career_period_month" class="bar_title total_title"><span class="valid_hidden">총경력 월수</span></label>
+                        <input type="text" id="career_period_month" name="career_period_month" class="box_input career_sum_year"  readonly="" maxlength="2" data-only-number="true">
+                      </div>
+                      <span class="txt_period">개월</span>
+                      <div class="area_check">
+                        <label class="sri_check" for="career_repetition_removal">
+                          <input type="checkbox" id="career_repetition_removal" name="career_repetition_removal" class="inp_check inp_check_ing" value="y">
+                          <span class="txt_check">중복 기간 빼기</span>
+                        </label>
+                        <label class="sri_check" for="career_user_input">
+                          <input type="checkbox" id="career_user_input" name="career_user_input" class="inp_check inp_check_ing" value="y">
+                          <span class="txt_check">직접입력</span>
+                        </label>
+                      </div>
+                    </div>                    
+                  </div>
+                </div>
+              </div>               
+            </div>            
+          </section>
+          <!-- section4  경험/활동/교육 -->
+          <section class="section4 content" id="content1">
+            <div class="area_title sec2_title_wrap">
+              <h3 class="sec3_Career_title">경험/활동/교육</h3>    
+              <div class="area_row_btn">
+                <button type="button" class="btn_resume_delete btn_delete"><i class="fa-solid fa-sliders"></i> 최근활동순 정렬 </button>
+                <button type="button" class="btn_add btn_resume_add"><i class="fa-solid fa-graduation-cap"></i> 직무캠프 수료 내역 불러오기</button>
+                <button type="button" class="btn_add btn_resume_add">저장된 정보 불러오기</button>
+              </div>       
+            </div>
+            <form action="" class="experience">
+              <div class="school_area_wrap">
+                <h4 class="subtitle">활동구분 선택</h4>
+                <select class="school_area ele_school">
+                  <option value="퇴사사유 선택">활동구분 선택</option>
+                  <option value="업직종 전환">교내 활동</option>
+                  <option value="근무조건">인턴</option>
+                  <option value="경영악화">자원봉사</option>
+                  <option value="계약만료">동아리</option>
+                  <option value="출산/육아">아르바이트</option>
+                  <option value="학업">사회활동</option>
+                  <option value="유학">수행과제</option>
+                  <option value="개인사정">해외연수</option>
+                  <option value="직접입력">교육이수내역</option>
+                </select>
+              </div>
+              <div class="school_wrap company_wrap">
+                <label for="ele_school" class="subtitle ele_school_label">기관/장소                   
+                </label>
+                <input type="text" id="ele_school" class="ele_school" placeholder="기관/장소 입력">                
+              </div> 
+              <div class="school_period">
+                <div class="school_name">
+                  <h4 class="subtitle school_information">활동기간</h4>                  
+                </div>
+                <div class="school_into">  
+                  <div class="school_start">
+                    <label for="school_date"><input type="date" class="school_date"></label>               
+                    </div>                
+                  <span class="wave"> ~ </span>
+                  <div class="school_start">
+                    <label for="school_date"><input type="date" class="school_date"></label>        
+                  </div> 
+                </div>
+              </div>
+              <div class="school_wrap company_wrap">
+                <label for="ele_school" class="subtitle ele_school_label">활동내용                  
+                </label>
+                <textarea id="activity_contents_1690847165" name="activity_contents[]" class="box_textarea" style="height: 150px;"></textarea>          
+              </div> 
+              <div class="area_add_btn">
+                <button type="button" class="btn_experience_add" data-tpl_id="tpl_activity_item"><span>경험/활동/교육 추가<i class="fa-solid fa-plus"></i></span></button>
+            </div>
+            </form>
+          </section> 
+          
+          <!-- section5  자격증/어학/수상 내역 -->
+          <section class="section5 content" id="content2">
+            <div class="area_title sec2_title_wrap">
+              <h3 class="sec3_Career_title">자격증 / 어학 / 수상 내역</h3>    
+              <div class="sec5_awarded ">
+                <button type="button" class="btn_resume_delete btn_delete naver_img_wrap">
+                  <div class="sec5_img_wrap"><img src="img/naver_icon.png" alt="naver" class="sec5_img"></div> 
+                  최근활동순 정렬 
+                </button>
+                <button type="button" class="btn_add btn_resume_add naver_img_wrap2"> 직무캠프 수료 내역 불러오기</button>                
+              </div> 
+            </div> 
+            <form action="" class="experience">
+              <div class="school_area_wrap">
+                <h4 class="subtitle">항목 선택</h4>
+                <select class="school_area ele_school">
+                  <option value="자격증/면허증">자격증/면허증</option>
+                  <option value="어학시험">어학시험</option>
+                  <option value="수상내역/공모전">수상내역/공모전</option>
+                </select>
+              </div>
+              <div class="school_wrap company_wrap">
+                <label for="ele_school" class="subtitle ele_school_label">자격증명                  
+                </label>
+                <input type="text" id="ele_school" class="ele_school" placeholder="자격증명 입력">                
+              </div> 
+              <div class="school_wrap company_wrap">
+                <label for="ele_school" class="subtitle ele_school_label">발행처/기관              
+                </label>
+                <input type="text" id="ele_school" class="ele_school" placeholder="발행처/기관 입력">                
+              </div> 
+              <div class="school_area_wrap">
+                <h4 class="subtitle">합격구분</h4>
+                <select class="school_area ele_school">
+                  <option value="합격구분선택">합격구분선택</option>
+                  <option value="1차합격">1차합격</option>
+                  <option value="2차합격">2차합격</option>
+                  <option value="필기합격">필기합격</option>
+                  <option value="실기합격">실기합격</option>
+                  <option value="최종합격">최종합격</option>
+                </select>
+              </div>
+              <div class="school_period">
+                <div class="school_name">
+                  <h4 class="subtitle school_information">취득일</h4>                  
+                </div>
+                <div class="school_into">  
+                  <div class="school_start">
+                    <label for="school_date"><input type="date" class="school_date"></label>               
+                    </div>
+                </div>
+              </div>
+              <div class="area_add_btn">
+                <button type="button" class="btn_experience_add" data-tpl_id="tpl_activity_item"><span>자격증/어학/수상내역 추가<i class="fa-solid fa-plus"></i></span></button>
+              </div>
+            </form>  
+          </section>
+
+          <!-- section6 보유기술 및 능력 -->
+          <section class="section6 content" id="content3">
+            <div class="area_title sec2_title_wrap">
+              <h3 class="sec3_Career_title">보유기술 및 능력</h3>    
+              <div class="sec5_awarded ">
+                <button type="button" class="btn_resume_delete btn_delete naver_img_wrap Storage_btn">                  
+                  저장된 정보 불러오기
+                </button>                              
+              </div> 
+            </div> 
+            <form action="" class="experience" >
+              <div class="school_wrap company_wrap skill_wrap">
+                <label for="ele_school" class="subtitle ele_school_label">보유기술             
+                </label>
+                <input type="text" id="ele_school" class="ele_school skill_inp" placeholder="  보유기술 입력(ex.문서작성능력,비지니스영어,커뮤니케이션스킬,java등)">   
+                <p class="adobe_recom">'Adobe Photoshop' 능력과 연관된 보유기술을 추천합니다.</p>     
+              </div> 
+              <div class="recom_skill">
+                <span class="Respectively_skill"><i class="fa-solid fa-plus"></i> DSLR</span>
+                <span class="Respectively_skill"><i class="fa-solid fa-plus"></i> Clipstudio</span>
+                <span class="Respectively_skill"><i class="fa-solid fa-plus"></i> 인스타스램</span>
+                <span class="Respectively_skill"><i class="fa-solid fa-plus"></i> 상품촬영</span>
+                <span class="Respectively_skill"><i class="fa-solid fa-plus"></i> 웨딩촬영</span>
+                <span class="Respectively_skill"><i class="fa-solid fa-plus"></i> 사진촬영</span>
+                <span class="Respectively_skill"><i class="fa-solid fa-plus"></i> 영상촬영</span>
+                <span class="Respectively_skill"><i class="fa-solid fa-plus"></i> QuarkXPewss</span>
+                <span class="Respectively_skill"><i class="fa-solid fa-plus"></i> 영상편집</span>
+              
+                <div class="Refresh_wrap">
+                  <i class="fa-solid fa-rotate-right"></i>
+                  <p class="Refresh_p">새로운 추천 보유 기술 보기</p>
+                </div>
+              </div>
+              <ul class="skillsWrap">
+                <li class="skillLi">
+                  <div class="skillDetailWrap">
+                    <h5 class="skillTitle">Adobe Photoshop</h5>
+                    <div class="skill_content">   
+                      <dl>                  
+                        <dd class="skillLevel">수준</dd>
+                        <dt class="haveSkill">GTQ1급 보유</dt>
+                      </dl> 
+                    </div>
+                    <div class="skill_content">
+                      <dl>
+                        <dd class="skillLevel">상세내용</dd>
+                        <dt class="haveSkill">합성,수정,색 변환 등 기본적인 작업 가능</dt>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="skillTitleAddWrap">
+                    <p class="skillTitleAdd">상세내용 수정.추가하기</p>
+                  </div>
+                </li>
+                <li class="skillLi">
+                  <div class="skillDetailWrap">
+                    <h5 class="skillTitle">Adobe Photoshop</h5>
+                    <div class="skill_content">   
+                      <dl>                  
+                        <dd class="skillLevel">수준</dd>
+                        <dt class="haveSkill">GTQ1급 보유</dt>
+                      </dl> 
+                    </div>
+                    <div class="skill_content">
+                      <dl>
+                        <dd class="skillLevel">상세내용</dd>
+                        <dt class="haveSkill">합성,수정,색 변환 등 기본적인 작업 가능</dt>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="skillTitleAddWrap">
+                    <p class="skillTitleAdd">상세내용 수정.추가하기</p>
+                  </div>
+                </li>
+              </ul>
+            </form>
+          </section>
+
+          <!-- section7 취업 우대사항 -->
+          <section class="content section7" id="content4">
+            <div class="area_title sec2_title_wrap">
+              <h3 class="sec3_Career_title">취업 우대사항</h3>    
+              <div class="sec5_awarded ">
+                <button type="button" class="btn_resume_delete btn_delete naver_img_wrap Storage_btn">                  
+                  저장된 정보 불러오기
+                </button>                              
+              </div> 
+            </div>
+            <form action="" class="experience">
+              <div class="school_area_wrap workLine">
+                <h4 class="subtitle">보훈대상</h4>
+                <select class="school_area ele_school">
+                  <option value="비대상">비대상</option>
+                  <option value="대상">대상</option>
+                </select>
+              </div>
+              <div class="school_area_wrap workLine" >
+                <h4 class="subtitle">병역대상</h4>
+                <select class="school_area ele_school">
+                  <option value="대상아님">대상아님</option>
+                  <option value="군필">군필</option>
+                  <option value="미필">미필</option>
+                  <option value="면제">면제</option>
+                  <option value="복무중">복무중</option>
+                </select>
+              </div>
+              <div class="school_area_wrap workLine">
+                <h4 class="subtitle">고용지원금 대상</h4>
+                <select class="school_area ele_school">
+                  <option value="비대상">비대상</option>
+                  <option value="대상">대상</option>
+                </select>
+                <p class="EmploymentP"><a href="https://www.ei.go.kr/ei/eih/eg/eb/ebEntrprBnef/retrieveEb0401Info.do" target="_blank" class="EmploymentA">고용지원금제도 보기</a>
+                  <i class="fa-solid fa-arrow-right EmploymentI"></i>
+                </p>
+              </div>
+            </form>
+          </section>
+
+          <!-- section8 포트폴리오 및 기타문서 -->
+          <section class="section8 content" id="content5">
+            <div class="area_title sec2_title_wrap">
+              <h3 class="sec3_Career_title">포트폴리오 및 기타문서</h3>                  
+            </div>
+            <form action="" class="experience">
+              <div class="sec8_wrap"  id="portfolioContainer">
+                <div class="ckeckWrap">
+                  <input type="checkbox" checked>포트폴리오                  
+                </div>
+                <div class="titleURLWrap">
+                  <a href="https://jungjeahoon.github.io/portfolio/" target="_blank" class="titleURL">https://jungjeahoon.github.io/portfolio/</a>
+                </div>
+                <div class="fileSizeWrap">
+                  <p class="fileSize">60KB</p>
+                </div>
+                <div class="fileDateWrap">
+                  <p class="fileDate">2023.07.17</p>
+                </div>
+                <div class="fileDeleteWrap">
+                  <p class="fileDate"><i class="fa-solid fa-trash-can trashIcon"></i></p>
+                </div>
+              </div>
+              <div class="sec8_wrap"  id="portfolioContainer">
+                <div class="ckeckWrap">
+                  <input type="checkbox" checked>포트폴리오                  
+                </div>
+                <div class="titleURLWrap">
+                  <a href="https://jungjeahoon.github.io/portfolio/" target="_blank" class="titleURL">https://jungjeahoon.github.io/portfolio/</a>
+                </div>
+                <div class="fileSizeWrap">
+                  <p class="fileSize">60KB</p>
+                </div>
+                <div class="fileDateWrap">
+                  <p class="fileDate">2023.07.17</p>
+                </div>
+                <div class="fileDeleteWrap">
+                  <p class="fileDate"><i class="fa-solid fa-trash-can trashIcon"></i></p>
+                </div>
+              </div>
+              <div class="portfolioAdd">포트폴리오 및 기타문서 추가 <i class="fa-solid fa-plus portfolioAddBtn"></i></div>
+            </form>
+
+            <!-- 포트폴리오 및 기타문서 추가 -->
+
+            <div class="DocumentsWrap">
+              <div class="DocuTitle">
+                <h3 class="TitleAttachment">첨부파일 등록</h3>
+                <p class="AttachP"><span class="AttachSpan">*</span>는 필수 입력, 파일크기 <span class="AttachSpan">개별파일 50MB, 총 200MB까지</span></p>
+                <div class="FileDeleteBtn"> X </div>
+              </div>              
+              <table>
+                <tr>
+                  <td>파일구분</td>
+                  <td>
+                    <select name="" id="">
+                      <option value="구분선택">구분선택</option>
+                      <option value="이력서">이력서</option>
+                      <option value="경력기술서">경력기술서</option>
+                      <option value="자격증">자격증</option>
+                      <option value="증명서">증명서</option>
+                      <option value="추천서">추천서</option>
+                      <option value="포트폴리오">포트폴리오</option>
+                      <option value="기획서">기획서</option>
+                      <option value="동영상">동영상</option>
+                      <option value="음성">음성</option>
+                      <option value="기타">기타</option>
+                    </select>
+                  </td>
+                </tr>                
+                <tr>
+                  <td  rowspan='2'>파일찾기</td>
+                  <td>
+                    <input type="checkbox" name="" id="" checked>파일
+                    <input type="checkbox" name="" id="" >URL
+                  </td>                
+                </tr>
+                <tr>                  
+                  <td>                    
+                    <input type="file" name="" id="">                    
+                  </td>
+                </tr>           
+              </table>
+              <div class="FileTextBox">
+                <p>파일은 50MB이하의 파일을 등록하실 수 있습니다. 용량이 큰 파일은 외부 링크를 활용하여 등록해주세요.</p>
+                <div>
+                  <p>위조된 문서를 등록하여 취업활동에 이용시 법적 책임을 지게 될 수 있습니다.
+                    (주)EZ-one은 구직자가 등록한 문서에 대해 보증하거나 별도의 책임을 지지 않으며
+                    첨부된 문서를신뢰하여 발생한 법적 분쟁에 책임을 지지 않습니다. (개인회원약관 제15조 관련)</p>
+                </div>
+              </div>
+              <div class="FileBtnBox">
+                <button class="FileBtn">취소</button>
+                <button class="FileBtn CompletionBtn">완료</button>
+              </div>
+            </div>
+
+
+          </section>
+
+          <!-- section9 경력 기술서 -->
+          <section class="section9 content"id="content6">
+            <div class="area_title sec2_title_wrap">
+              <h3 class="sec3_Career_title">경력 기술서</h3>     
+              <div class="sec5_awarded ">
+                <button type="button" class="btn_resume_delete btn_delete naver_img_wrap Storage_btn">                  
+                  저장된 정보 불러오기
+                </button>                              
+              </div>              
+            </div>
+            <div class="intro_item_wrap hideBasics">
+              <div class="write_area">
+                <div class="item_sample">
+                  <strong class="sec9_form">양식추천</strong>
+                  <button type="button" class="btn_sample btn_autocomplete_form projectBtn">프로젝트형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form DevelopBtn">개발 기술형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form DesignBtn">디자이너형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form BusinessBtn">영업 성과형</button>
+                </div>
+                <div class="item_txt">
+                  <label class="txtLabel" for="career_profile">최근 경력부터 역순으로 작성하며, 주요업무 내용 단위로 본인의 역할과 객관적인 성과를 작성해보세요.<br>(업무 주요내용, 기간, 역할, 기여도, 성과 등을 작성하며 본인의 역량과 업무 능숙도를 어필해보세요.)</label>
+                  <textarea id="career_profile" name="career_profile" class="textarea_type1" rows="1" cols="100" data-char-count="true" style="height: 394px;"></textarea>
+                </div>
+                <div class="item_edit">
+                  <div class="txt_length">
+                    <strong class="title_length">총 글자수 </strong>
+                    <span class="txt_byte">(공백포함) <strong class="input-char">217</strong> 자 / <strong class="input-byte">276</strong> byte</span>
+                    <i class="bar">|</i>
+                    <span class="txt_byte">(공백제외) <strong class="input-char">155</strong> 자 / <strong class="input-byte">214</strong> byte</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="intro_item_wrap projectType">
+              <div class="write_area">
+                <div class="item_sample">
+                  <strong class="sec9_form">양식추천</strong>
+                  <button type="button" class="btn_sample btn_autocomplete_form"style="background:#4876ef; color:#fff">프로젝트형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form">개발 기술형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form">디자이너형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form">영업 성과형</button>
+                </div>
+                <div class="item_txt">
+                  <textarea id="career_profile" name="career_profile" class="textarea_type1" rows="1" cols="100" data-char-count="true" style="height: 394px; color:#6d6d6d;font-size: 12px;line-height: 18px;font-family: 'Noto Sans KR';">
+                  
+                    (1)프로젝트 명 : 
+                    - 연계/소속 회사 : (연계/소속 회사가 없을 경우,해당 항목을 지우고 작성하세요)
+                    - 수행 기간 : YYYY .MM ~ YYYY .MM (약 N개월 소요)
+                    - 주요 역활 : 화면 설계 및 서비스 기획
+                    - 업무 성과 : 
+
+                    (2)프로젝트 명 : 
+                    - 연계/소속 회사 : (연계/소속 회사가 없을 경우,해당 항목을 지우고 작성하세요)
+                    - 수행 기간 : YYYY .MM ~ YYYY .MM (약 N개월 소요)
+                    - 주요 역활 : 화면 설계 및 서비스 기획
+                    - 업무 성과 : 
+                  
+                  </textarea>
+                </div>
+                <div class="item_edit">
+                  <div class="txt_length">
+                    <strong class="title_length">총 글자수 </strong>
+                    <span class="txt_byte">(공백포함) <strong class="input-char">217</strong> 자 / <strong class="input-byte">276</strong> byte</span>
+                    <i class="bar">|</i>
+                    <span class="txt_byte">(공백제외) <strong class="input-char">155</strong> 자 / <strong class="input-byte">214</strong> byte</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="intro_item_wrap  DevelopType">
+              <div class="write_area">
+                <div class="item_sample">
+                  <strong class="sec9_form">양식추천</strong>
+                  <button type="button" class="btn_sample btn_autocomplete_form">프로젝트형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form" style="background:#4876ef; color:#fff">개발 기술형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form">디자이너형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form">영업 성과형</button>
+                </div>
+                <div class="item_txt">
+                  <textarea id="career_profile" name="career_profile" class="textarea_type1" rows="1" cols="100" data-char-count="true" style="height: 394px; color:#6d6d6d;font-size: 12px;line-height: 18px;font-family: 'Noto Sans KR';">
+                  
+                    (1)프로젝트 명 : 
+                    - 연계/소속 회사 : (연계/소속 회사가 없을 경우,해당 항목을 지우고 작성하세요)
+                    - 주요 업무 : 벡앤드 전담
+                    - 담당 역활 : 
+                    - 기술 스택 : (운영 체제, 개발 언어, 데이터베이스등)
+                    - 업무 기간 : YYYY .MM ~ YYYY .MM (약 N개월 소요)
+                    - 개발 인원 : 
+                    - 상세 내용 : 
+
+                    (2)프로젝트 명 : 
+                    - 연계/소속 회사 : (연계/소속 회사가 없을 경우,해당 항목을 지우고 작성하세요)
+                    - 주요 업무 : 벡앤드 전담
+                    - 담당 역활 : 
+                    - 기술 스택 : (운영 체제, 개발 언어, 데이터베이스등)
+                    - 업무 기간 : YYYY .MM ~ YYYY .MM (약 N개월 소요)
+                    - 개발 인원 : 
+                    - 상세 내용 :
+                  
+                  </textarea>
+                </div>
+                <div class="item_edit">
+                  <div class="txt_length">
+                    <strong class="title_length">총 글자수 </strong>
+                    <span class="txt_byte">(공백포함) <strong class="input-char">217</strong> 자 / <strong class="input-byte">276</strong> byte</span>
+                    <i class="bar">|</i>
+                    <span class="txt_byte">(공백제외) <strong class="input-char">155</strong> 자 / <strong class="input-byte">214</strong> byte</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="intro_item_wrap  DesignType">
+              <div class="write_area">
+                <div class="item_sample">
+                  <strong class="sec9_form">양식추천</strong>
+                  <button type="button" class="btn_sample btn_autocomplete_form">프로젝트형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form" >개발 기술형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form"style="background:#4876ef; color:#fff">디자이너형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form">영업 성과형</button>
+                </div>
+                <div class="item_txt">
+                  <textarea id="career_profile" name="career_profile" class="textarea_type1" rows="1" cols="100" data-char-count="true" style="height: 394px; color:#6d6d6d;font-size: 12px;line-height: 18px;font-family: 'Noto Sans KR';">
+                  
+                    (1)주요 업무 : 콘텐츠 제작 
+                    - 사용 Tool : (ex)Photoshop
+                    - 업무 기간 : YYYY .MM ~ YYYY .MM (약 N개월 소요)
+                    - 포트폴리오 URL : 
+                    - 상세 내용 : 
+
+                    (2)주요 업무 : 콘텐츠 제작 
+                    - 사용 Tool : (ex)Photoshop
+                    - 업무 기간 : YYYY .MM ~ YYYY .MM (약 N개월 소요)
+                    - 포트폴리오 URL : 
+                    - 상세 내용 : 
+                  
+                  </textarea>
+                </div>
+                <div class="item_edit">
+                  <div class="txt_length">
+                    <strong class="title_length">총 글자수 </strong>
+                    <span class="txt_byte">(공백포함) <strong class="input-char">217</strong> 자 / <strong class="input-byte">276</strong> byte</span>
+                    <i class="bar">|</i>
+                    <span class="txt_byte">(공백제외) <strong class="input-char">155</strong> 자 / <strong class="input-byte">214</strong> byte</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="intro_item_wrap  BusinessType">
+              <div class="write_area">
+                <div class="item_sample">
+                  <strong class="sec9_form">양식추천</strong>
+                  <button type="button" class="btn_sample btn_autocomplete_form">프로젝트형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form" >개발 기술형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form">디자이너형</button>
+                  <button type="button" class="btn_sample btn_autocomplete_form"style="background:#4876ef; color:#fff">영업 성과형</button>
+                </div>
+                <div class="item_txt">
+                  <textarea id="career_profile" name="career_profile" class="textarea_type1" rows="1" cols="100" data-char-count="true" style="height: 394px; color:#6d6d6d;font-size: 12px;line-height: 18px;font-family: 'Noto Sans KR';">
+                  
+                    (1)프로젝트명 
+                    - 연계/소속회가 : (연계/소속회사가 없을경우, 해당 항목을 지우고 작성하세요)
+                    - 주요 업무 : 
+                    - 수행 기간 : YYYY .MM ~ YYYY .MM (약 N개월 소요)
+                    - 담당 지역 : 
+                    - 계약 건수 : 월 평균 _건
+                    - 고객 수 : ex.인수30%, 신규 개척 70%
+                    - 상세 내용 
+
+                    (2)프로젝트명 
+                    - 연계/소속회가 : (연계/소속회사가 없을경우, 해당 항목을 지우고 작성하세요)
+                    - 주요 업무 : 
+                    - 수행 기간 : YYYY .MM ~ YYYY .MM (약 N개월 소요)
+                    - 담당 지역 : 
+                    - 계약 건수 : 월 평균 _건
+                    - 고객 수 : ex.인수30%, 신규 개척 70%
+                    - 상세 내용 
+                  
+                  </textarea>
+                </div>
+                <div class="item_edit">
+                  <div class="txt_length">
+                    <strong class="title_length">총 글자수 </strong>
+                    <span class="txt_byte">(공백포함) <strong class="input-char">217</strong> 자 / <strong class="input-byte">276</strong> byte</span>
+                    <i class="bar">|</i>
+                    <span class="txt_byte">(공백제외) <strong class="input-char">155</strong> 자 / <strong class="input-byte">214</strong> byte</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- section10 자기 소개서 -->
+
+          <section class="section10 content" id="content7">
+            <div class="area_title sec2_title_wrap sec10_title_wrap">
+              <h3 class="sec3_Career_title">자기 소개서</h3>   
+              <p class="Sec10_titleP">각 항목별은 변경할수 있으며(최대 100자),항목은 총 10개까지 작성 가능합니다</p>  
+              <div class="sec5_awarded sec10_awarded">
+                <button type="button" class="Sec10_Infor IntroduceBtn">                  
+                  자기소개서 항목 예시
+                </button>      
+                <button type="button" class="Sec10_Infor">                  
+                  저장된 정보 불러오기
+                </button>                         
+              </div>              
+            </div>
+            <div class="intro_item_wrap">
+              <div class="write_area">
+                  <div id="introduce_items" class="inner_wrap">                      
+                    <div id="tpl_row_1690934480" class="tpl_row intro_item on"    data-tpl_id="tpl_introduce_item">
+                      <div class="item_title">
+                          <div class="input_wrap">
+                              <label for="intro_title_1690934480" class="sec10_txt" style="display: block;">자소서 제목</label>
+                              <input type="text" id="intro_title_1690934480" name="intro_title[]" class="input_type10" value="" maxlength="100"placeholder="자소서제목">
+                              <p class="txt_error"></p>
+                          </div>
+                      </div>                    
+                        <div class="item_txt">
+                            <div class="textarea_wrap">
+                                <label for="intro_contents_1690934480" class="txt sec10_txt" style="display: block;">자소서 내용</label>
+                                <textarea id="intro_contents_1690934480" name="intro_contents[]" class="textarea_type1" rows="1" cols="100" data-char-count="true" style="height: 240px;" ></textarea>
+                            </div>                 
+                        </div>                    
+                        <div class="item_edit">
+                            <div class="txt_length">
+                                <strong class="title_length">글자수 </strong>
+                                <span class="txt_byte">(공백포함) <strong class="input-char">0</strong> 자 / <strong class="input-byte">0</strong> byte</span>
+                                <i class="bar">|</i>
+                                <span class="txt_byte">(공백제외) <strong class="input-char">0</strong> 자 / <strong class="input-byte">0</strong> byte</span>
+                            </div>                            
+                        </div>
+                    </div>                 
+                    <div class="txt_total_length">
+                        <div class="txt_length">
+                            <strong class="title_length">총 글자수</strong>
+                            <span class="txt_byte">
+                              <strong class="input-char point">0</strong> 자 / 
+                              <strong class="input-byte">0</strong> byte
+                            </span>
+                        </div>
+                    </div>                    
+                  </div>
+              </div>
+            </div>
+
+            <!-- 자기소개서 항목예시 -->
+
+            <div class="Self_introduction_wrap">
+              <div class="Self_introduction_inner">
+                <div class="Self_introduction_Title">
+                  자기소개서 항목별 제목
+                  <i class="fa-solid fa-xmark sec10_Title_Closed"></i>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>기본형1</p>
+                        <span>(기본항목 위주로 표현할 때)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">가족소개</div>
+                        <div class="sec10_content">성장과정</div>
+                        <div class="sec10_content">학창시절</div>
+                        <div class="sec10_content">교외활동</div>
+                        <div class="sec10_content">전공선택 이유와 적성</div>
+                        <div class="sec10_content">성격의 장단점</div>
+                        <div class="sec10_content">생활신조</div>
+                        <div class="sec10_content">지원동기</div>
+                        <div class="sec10_content">입사 후 포부</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>기본형2</p>
+                        <span>(기본항목 위주로 표현할 때)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">성장환경</div>
+                        <div class="sec10_content">교우관계</div>
+                        <div class="sec10_content">동아리/봉사활동</div>
+                        <div class="sec10_content">사회경험</div>
+                        <div class="sec10_content">성격소개</div>
+                        <div class="sec10_content">좌우명</div>
+                        <div class="sec10_content">장래포부</div>
+                        <div class="sec10_content">지원동기</div>
+                        <div class="sec10_content">입사 후 희망업무</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>깔끔형</p>
+                        <span>(필수항목 위주로 표현)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">자기소개</div>
+                        <div class="sec10_content">지원동기</div>
+                        <div class="sec10_content">입사 후 계획</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>개성형1</p>
+                        <span>(개성만점!! 나만의 표현법)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">햇살을 머금고 태어난 아이</div>
+                        <div class="sec10_content">지칠 줄 모르는 강인한 체력</div>
+                        <div class="sec10_content">세상과 소통하는 눈과 귀</div>
+                        <div class="sec10_content">잊지못할 소중한 경험들</div>
+                        <div class="sec10_content">나를 빛나게 하는 사람들</div>
+                        <div class="sec10_content">자랑하고 싶은 나만의 꿈</div>
+                        <div class="sec10_content">저를 뽑으셔야 하는 명백한 이유</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>개성형2</p>
+                        <span>(개성만점!! 나만의 표현법)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">세상에 첫 발을 내딛다.</div>
+                        <div class="sec10_content">촌 놈, 뚝심을 보여라!</div>
+                        <div class="sec10_content">인간성이 밥 먹여준다!</div>
+                        <div class="sec10_content">세상의 축소판, 활개치다!</div>
+                        <div class="sec10_content">OO기업, 너를 내 품에!</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>개성형3</p>
+                        <span>(개성만점!! 나만의 표현법)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">세 발 자전거를 타던 4살 꼬마</div>
+                        <div class="sec10_content">걸음이 느린 아이</div>
+                        <div class="sec10_content">아낌없이 주는 착한 여자</div>
+                        <div class="sec10_content">내 가슴에 뜬 몇 개의 섬</div>
+                        <div class="sec10_content">동화 같은 기업에서 일하고 싶다</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>개성형4</p>
+                        <span>(개성만점!! 나만의 표현법)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">三人行必有我師 (삼인행필유아사)</div>
+                        <div class="sec10_content">귀사를 대표하는 OOO가 되겠습니다.</div>
+                        <div class="sec10_content">인간 ㅇㅇㅇ에게 도움 주신 분들</div>
+                        <div class="sec10_content">1+1 = 3 의 공식이 나의 목표</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>개성형5</p>
+                        <span>(개성만점!! 나만의 표현법)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">“첫사랑, OOO과 만나다.” (성장배경)</div>
+                        <div class="sec10_content">“넌 누구냐?” (성격소개)</div>
+                        <div class="sec10_content">“열정도 능력이다.” (가치관)</div>
+                        <div class="sec10_content">“자아도취” (특기)</div>
+                        <div class="sec10_content">“가장 매력적인 OOO.” (희망업무)</div>
+                        <div class="sec10_content">“꼭 가고 싶습니다!” (지원동기)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>개성형6</p>
+                        <span>(개성만점!! 나만의 표현법)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">대자연에게 배운 넓은 시각 (성장과정)</div>
+                        <div class="sec10_content">리더의 기본과 원만한 인간관계 (성격소개)</div>
+                        <div class="sec10_content">내일을 향한 작은 준비들 (학창시절)</div>
+                        <div class="sec10_content">경험에서 배운 소중한 교훈들 (사회활동)</div>
+                        <div class="sec10_content">능동적인 모습으로 변화 (입사후포부)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>개성형8</p>
+                        <span>(개성만점!! 나만의 표현법)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">장손으로서의 책임감 있는 삶</div>
+                        <div class="sec10_content">도전적이고 편안한 인상의 소유자</div>
+                        <div class="sec10_content">배우고자 하는 뜨거운 열정</div>
+                        <div class="sec10_content">나의 꿈은 국제 품질전문가</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>경력형1</p>
+                        <span>(경력자를 위한 자기 소개서)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">본인소개</div>
+                        <div class="sec10_content">전문보유기술</div>
+                        <div class="sec10_content">주요실적 및 세부내용</div>
+                        <div class="sec10_content">이직/전직 사유</div>
+                        <div class="sec10_content">희망부서 및 직급</div>
+                        <div class="sec10_content">지원동기 및 요청사항</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>경력형2</p>
+                        <span>(경력자를 위한 자기 소개서)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">전공과 적성</div>
+                        <div class="sec10_content">취미,특기</div>
+                        <div class="sec10_content">담당업무와 부서</div>
+                        <div class="sec10_content">프로젝트경험</div>
+                        <div class="sec10_content">지원동기</div>
+                        <div class="sec10_content">입사 후 계획</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>공채형1</p>
+                        <span>(최신트렌드반영)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">가장 열정을 바쳐서 일했던 경험</div>
+                        <div class="sec10_content">성격의 장점을 발휘해서 문제를 해결했던 경험</div>
+                        <div class="sec10_content">성격의 단점으로 인해 실패했던 경험</div>
+                        <div class="sec10_content">성격의 단점을 극복하고 성공했던 경험</div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="Self_Item_Wrap">
+                  <div class="Self_Item_Title">
+                    <div class="Lettle_Item_Title">
+                      <div>
+                        <p>공채형2</p>
+                        <span>(최신트렌드반영)</span>
+                      </div>                      
+                    </div>
+                  </div>
+                  <div class="Self_Item_Content">
+                    <div class="Lettle_Item_Content">
+                      <div>
+                        <div class="sec10_content">10년 후의 나의 모습</div>
+                        <div class="sec10_content">다른 사람을 감동시켰던 경험</div>
+                        <div class="sec10_content">기존의 틀을 깨는 새로운 시도를 했던 경험</div>
+                        <div class="sec10_content">옳은 일을 위해 소신을 지켰던 경험</div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+            </div>
+          </section>
+
+          <!-- section11 인.적성 검사 -->
+          <section class="section11 content"id="content8">
+            <div class="area_title sec2_title_wrap sec10_title_wrap">
+              <h3 class="sec3_Career_title">인.적성 검사</h3>   
+              <p class="noti_portfolio">
+                <b>응시 완료한</b> 사람인 인・적성 검사 결과를 <b>각 1개씩 첨부</b>할 수 있습니다.<br>
+                사람인 인성검사, 적성검사는 최초 응시일로부터 1년간 최대 4회 응시 할 수 있으며 검사 완료 30일 후 재응시가 가능합니다.<br>
+                선택한 인·적성검사 결과는 입사지원 시 이력서에 첨부되어 제출됩니다.<br>
+                응시한 인 ∙ 적성검사는 응시 시작일로부터 3년간 확인할 수 있으며, 만료된  인 ∙ 적성검사가 포함된 경우 입사지원이 불가능합니다.<br>
+                단, 입사지원 시 제출된 인성 ∙ 적성검사 결과는 응시일과 관계없이 입사지원서 열람 기준 내 인사담당자가 확인할 수 있습니다.
+              </p>                          
+            </div>
+            <div class="Test_Wrap">
+              <div class="TestTitleWrap">
+                <h4 class="TestTitle">인성검사</h4>
+                <button class="TestBtn"><a href="https://www.saramin.co.kr/zf_user/search?search_area=main&search_done=y&search_optional_item=n&searchType=search&searchword=%EC%9D%B8%EC%84%B1%EA%B2%80%EC%82%AC&loc_cd=102100%2C102190%2C102250%2C102260%2C102280%2C102290%2C102300%2C102320%2C102330%2C102340%2C102440&cat_kewd=91%2C92" target="_blank"> 검사하러가기</a></button>
+              </div>
+              <div class="TestBoxWrap">
+                <div class="TestDate">
+                  <input type="checkbox">
+                  <p>응시일 2023.08.01</p>
+                </div>
+                <div class="TestTake">응시완료</div>
+                <div class="Progress">진행률 100%</div>
+                <div class="TestResult">
+                  <button class="TestBtn">결과보기</button>
+                </div>
+              </div>
+            </div>
+            <div class="Test_Wrap">
+              <div class="TestTitleWrap">
+                <h4 class="TestTitle">적성검사</h4>
+                <button class="TestBtn"><a href="https://www.saramin.co.kr/zf_user/search?search_area=main&search_done=y&search_optional_item=n&searchType=search&searchword=%EC%9D%B8%EC%84%B1%EA%B2%80%EC%82%AC&loc_cd=102100%2C102190%2C102250%2C102260%2C102280%2C102290%2C102300%2C102320%2C102330%2C102340%2C102440&cat_kewd=91%2C92" target="_blank"> 검사하러가기</a></button>
+              </div>
+              <div class="TestBoxWrap">
+                <div class="TestDate">
+                  <input type="checkbox">
+                  <p>응시일 2023.08.01</p>
+                </div>
+                <div class="TestTake">응시완료</div>
+                <div class="Progress">진행률 100%</div>
+                <div class="TestResult">
+                  <button class="TestBtn">결과보기</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </form>
+      </form>
+  </div>
+
+
+
+<!--800px이후 gnb창 -->
+      <div class="gnb_open">
+        <div class="inner">
+          <div class="box_change_order">
+            <h4 class="title_tip">이력서 항목</h4>
+            <ul class="list_change">
+              <li class="disabled"><a href="##" class="disabledA">기본정보 
+                <span class="Essential">필수</span></a>
+              </li>
+              <li class="disabled" class="disabledA">학력사항 
+                <span class="Essential">필수</span>
+              </li>
+              <li class="disabled" class="disabledA">경력사항 
+                <span class="Essential">필수</span>
+              </li>
+              <li>
+                <a href="#" class="link_change check_on link_changeA"  data-content="content1">경험/활동/교육
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##"class="link_change check_on link_changeA"  data-content="content2">자격증/어학/수상 내역
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##"class="link_change check_on link_changeA"  data-content="content3">보유기술 및 능력
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##" class="link_change check_on link_changeA"  data-content="content4">취업 우대사항
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##" class="link_change check_on link_changeA"  data-content="content5">포트폴리오 및 기타문서
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##" class="link_change check_on link_changeA"  data-content="content6">경력기술서
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##" class="link_change check_on link_changeA"  data-content="content7">자기소개서
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##" class="link_change check_on link_changeA"  data-content="content8">사람인 인∙적성 검사
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="area_btn">
+            <button type="button" class="btn_big_type btn_preview"><a href="Preview.html">미리보기</a></button>
+            <button type="button" class="btn_big_type btn_half_save">중간저장
+            </button>
+            <button type="button" class="btn_big_type btn_big_type2 btn_save">이력서 저장
+            </button>
+          </div>
+          <div class="area_same_time">
+            <label for="use_save_common_fl" class="sri_check">
+              <input type="checkbox" name="use_save_common_fl" class="inp_check">
+              <span class="txt_check">이력서 내용 동시적용</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+      <!-- aside -->
+      <aside class="nudge_wrap">
+        <div class="inner">
+          <div class="box_change_order">
+            <h4 class="title_tip">이력서 항목</h4>
+            <ul class="list_change">
+              <li class="disabled"><a href="#" class="disabledA">기본정보 
+                <span class="Essential">필수</span></a>
+              </li>
+              <li class="disabled" class="disabledA"><a href="#"></a> 학력사항 
+                <span class="Essential">필수</span>
+              </li>
+              <li class="disabled" class="disabledA">경력사항 
+                <span class="Essential">필수</span>
+              </li>
+              <li>
+                <a href="#" class="link_change check_on link_changeA"  data-content="content1">경험/활동/교육
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##"class="link_change check_on link_changeA"  data-content="content2">자격증/어학/수상 내역
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##"class="link_change check_on link_changeA"  data-content="content3">보유기술 및 능력
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##" class="link_change check_on link_changeA"  data-content="content4">취업 우대사항
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##" class="link_change check_on link_changeA"  data-content="content5">포트폴리오 및 기타문서
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##" class="link_change check_on link_changeA"  data-content="content6">경력기술서
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##" class="link_change check_on link_changeA"  data-content="content7">자기소개서
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+              <li>
+                <a href="##" class="link_change check_on link_changeA"  data-content="content8">사람인 인∙적성 검사
+                  <span class="btn_checkSpan check_on_click btn_check">추가 +</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="area_btn">
+            <button type="button" class="btn_big_type btn_preview"><a href="Preview.html">미리보기</a></button>
+            <button type="button" class="btn_big_type btn_half_save">중간저장
+            </button>
+            <button type="button" class="btn_big_type btn_big_type2 btn_save">이력서 저장
+            </button>
+          </div>
+          <div class="area_same_time">
+            <label for="use_save_common_fl" class="sri_check">
+              <input type="checkbox" name="use_save_common_fl" class="inp_check">
+              <span class="txt_check">이력서 내용 동시적용</span>
+            </label>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+  <script src="career.js"></script>
+</body>
+</html>
